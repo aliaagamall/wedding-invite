@@ -960,29 +960,7 @@
         
         // Opening celebration effect
         function createOpeningCelebration() {
-            const celebrationElements = ['🎉', '🎊', '✨', '🌟', '💖', '💕', '🌸', '🌹'];
-            
-            for (let i = 0; i < 40; i++) {
-                setTimeout(() => {
-                    const element = document.createElement('div');
-                    element.innerHTML = celebrationElements[Math.floor(Math.random() * celebrationElements.length)];
-                    element.style.cssText = `
-                        position: fixed;
-                        font-size: ${Math.random() * 2 + 1.5}rem;
-                        left: 50%;
-                        top: 50%;
-                        animation: celebration 5s ease-out forwards;
-                        pointer-events: none;
-                        z-index: 999;
-                        color: ${['#d4af37', '#f5deb3', '#ffd700', '#daa520'][Math.floor(Math.random() * 4)]};
-                        --random-x: ${(Math.random() - 0.5) * 800}px;
-                        --random-y: ${(Math.random() - 0.5) * 800}px;
-                    `;
-                    document.body.appendChild(element);
-                    
-                    setTimeout(() => element.remove(), 5000);
-                }, i * 120);
-            }
+           
         }
         
         // Countdown timer
